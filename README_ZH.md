@@ -10,7 +10,9 @@ English Documentation Please Click [here](https://github.com/Plachtaa/VITS-fast-
 
 中日英：[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer) 作者：我  
 
-中日：[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai) 作者：[SayaSS](https://github.com/SayaSS) 
+中日：[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai) 作者：[SayaSS](https://github.com/SayaSS)  
+
+纯中文：（没有huggingface demo）作者：[Wwwwhy230825](https://github.com/Wwwwhy230825)
 
 ### 目前支持的任务:
 - [x] 从 10条以上的短音频 克隆角色声音
@@ -26,10 +28,11 @@ English Documentation Please Click [here](https://github.com/Plachtaa/VITS-fast-
 
 
 ## 微调
-建议使用 [Google Colab](https://colab.research.google.com/drive/1pn1xnFfdLK63gVXDwV4zCXfVeo8c-I-0?usp=sharing)
-进行微调任务，因为VITS在多语言情况下的某些环境依赖相当难以配置。
-### 在Google Colab里，我需要花多长时间？
-1. 安装依赖 (3 min)
+若希望于本地机器进行训练，请参考[LOCAL.md](https://github.com/Plachtaa/VITS-fast-fine-tuning/blob/main/LOCAL.md)以进行。  
+另外，也可以选择使用 [Google Colab](https://colab.research.google.com/drive/1pn1xnFfdLK63gVXDwV4zCXfVeo8c-I-0?usp=sharing)
+进行微调任务。
+### 我需要花多长时间？
+1. 安装依赖 (10 min在Google Colab中)
 2. 选择预训练模型，详细区别参见[Colab 笔记本页面](https://colab.research.google.com/drive/1pn1xnFfdLK63gVXDwV4zCXfVeo8c-I-0?usp=sharing)。
 3. 上传你希望加入的其它角色声音，详细上传方式见[DATA.MD](https://github.com/Plachtaa/VITS-fast-fine-tuning/blob/main/DATA.MD)
 4. 进行微调，根据选择的微调方式和样本数量不同，花费时长可能在20分钟到2小时不等。
@@ -49,6 +52,7 @@ inference
 └───G_latest.pth
 ```
 4. 运行 `inference.exe`, 浏览器会自动弹出窗口, 注意其所在路径不能有中文字符或者空格.
+5. 请注意，声线转换功能需要安装`ffmpeg`才能正常使用.
 
 ## 在MoeGoe使用
 0. MoeGoe以及类似其它VITS推理UI使用的config格式略有不同，需要下载的文件为模型`G_latest.pth`和配置文件`moegoe_config.json`
